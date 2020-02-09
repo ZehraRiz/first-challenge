@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>First Challenge</title>
 
@@ -19,12 +20,18 @@
           <div id= "branding">
             <a href="#"><img src="./img/logo.svg"></a>
           </div>
+         <div class="menu-button">
+           <input type="checkbox" id="toggle"/>
+            <label for = "toggle">&#9776;</label>
+            
+            </div>
           <nav>   
             <a href = "#">How we work</a>
             <a href = "# ">Blog</a>
             <a href = "#">Account</a>
-            <a href = #><button>View Plans</button></a>
+            <a href = #>View plans</a>
           </nav>
+         
       </div>
   </header>
 
@@ -35,9 +42,16 @@
 
   <!--Showcase-->
   <section id = "showcase">
-    <img id="design-1" src="img/bg-pattern-intro-right-desktop.svg">
+    <div id = "purple-background">
+<img id="design-1" src="img/bg-pattern-intro-right-desktop.svg">
+<img id="design-2" src="img/bg-pattern-intro-left-desktop.svg">
+<img id="design-1-mob" src="img/bg-pattern-intro-right-mobile.svg">
+<img id="design-2-mob" src="img/bg-pattern-intro-left-mobile.svg">
+
       <div class="container">
+       
         <article id = "showcase-text">
+         
           <hr>
           <h1>Humanizing your insurance.</h1>
         <p>
@@ -46,9 +60,10 @@
         <button id="view-plans-btn">View Plans</button>
         </article>
         <img class ="people-img" src = "./img/image-intro-desktop.jpg">
-        <img id="design-2" src="img/bg-pattern-intro-left-desktop.svg">
+        <img class ="people-img-mob" src = "./img/image-intro-mobile.jpg">
       </div>
     
+      </div>
   </section>
 
   <!--Three column section-->

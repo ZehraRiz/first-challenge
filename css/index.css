@@ -9,7 +9,7 @@ body{
 
 
 .container{
-    width: 75%;
+    width: 80%;
     margin: auto;
     overflow: hidden;
 }
@@ -51,13 +51,14 @@ hr{
 /*header*/
 
 header .container{
+    min-height: 70px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-height: 70px;
 }
 
-header a{
+header nav a{
     color: hsl(273, 4%, 51%);
     text-decoration: none;
     text-transform: uppercase;
@@ -66,19 +67,29 @@ header a{
     cursor: default;
 }
 
-#showcase {
-    background-color:hsl(256, 26%, 20%);
-    color: white;
-    display: inline-block;
-    max-height: 70%;
-    position: relative;
+.menu-button{
+    display: none;
+}
 
+
+
+
+
+/*showcae*/
+
+
+
+#purple-background {
+    background-color:hsl(256, 26%, 20%);
+    display: block;
+    position: relative;
 }
 
 #showcase .container{
     display: flex;
     justify-content: space-between;
     padding: 70px;
+    color: white;
 }
 
 #showcase-text{
@@ -104,10 +115,11 @@ header a{
 #showcase .people-img{
     height:  450px;
     right: 130px;
-    bottom: -60px;
-    overflow: visible;
-    position: absolute;
-    
+}
+
+
+#showcase .people-img-mob{
+    display: none;
 }
 
 #design-1{
@@ -121,11 +133,15 @@ header a{
 
   #design-2{
     position: absolute;
-    bottom: -60%;
+    bottom: -50%;
     left: 0;
     z-index: 1;
     height: 360px;
     overflow: visible;
+  }
+
+  #design-1-mob, #design-2-mob{
+      display: none;
   }
 
   /*were different 3 sections*/
@@ -238,3 +254,155 @@ header a{
      list-style-type: none;
      font-weight: 400 ;
  }
+
+ /* media queries */
+ @media(max-width: 500px){
+
+    .container{width: 100%;}
+
+
+    header .container{
+        min-height: 75px;
+        display: inline-block;
+        position: relative;
+    }
+
+    header #branding{
+        display: inline;
+         position: absolute;
+         left: 0;
+         margin: 30 30 30 20;
+        
+        
+    }
+
+     .menu-button{
+        display: inline;
+        position: absolute;
+        right: 0;
+        margin: 20px;
+        font-size: 26px;
+       
+
+     }
+     nav{
+        display: none;
+         text-align: center;
+         width: 100%;
+         padding-top: 70px;
+     }
+
+     nav a{
+         display: block;
+         border-bottom: 1px solid black;
+         margin: 0;
+         
+     }
+    
+     
+   #toggle{
+       display: none;
+   }
+
+
+   #showcase .container{
+       padding: 0;
+       flex-direction: column-reverse; 
+        align-items: center;
+       
+   }
+
+   #showcase-text{
+      
+       width: 90%;
+       overflow: hidden;
+       margin-top: 50px;
+       margin-bottom: 50px;
+       align-items: center;
+       text-align: center;
+   }
+
+
+   #showcase-text hr{
+       display: none;
+   }
+   #showcase-text h1{
+       font-size: 40px;
+    margin: 0;
+}
+
+#design-1, #design-2, #design-3{
+    display: none;
+  }
+ 
+  #showcase .people-img{
+    display: none;
+  }
+    #showcase .people-img-mob{
+        display: block;
+    }
+  /*were different 3 sections*/
+  #were-different .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}   
+
+.boxes{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box{
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/*how we work card*/
+#how-we-work-card{
+    margin-top: 30px;
+    flex-direction: column;
+    text-align: center;
+}
+#how-we-work-card h1{
+    margin: 0px;
+    font-size: 25px;
+    
+}
+
+#how-we-work-card button{
+    margin-top: 30px;
+    margin-right: 0px;
+}
+
+/*footer*/
+#footer-card{
+      margin-top: 30px;
+      padding: 20px;
+      margin-bottom: 0px;
+  }
+
+.social{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social ul{
+    padding-top: 10px;
+    display: inline;
+}
+#footer-card .boxes{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+#footer-card hr{
+    margin-top: 30px;
+}
+
+ }
+
