@@ -2,15 +2,17 @@
     padding: 0;
     margin: 0;
 }
-body{
+html, body{
     font: 16/1.5;
     font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
 }
 
 
 .container{
     width: 80%;
     margin: auto;
+    text-align: center;
     overflow: hidden;
 }
 
@@ -346,7 +348,8 @@ header nav a{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 10px;
+  width: 95vw;
+  margin: 0 10px;
 }   
 
 .boxes{
@@ -405,3 +408,50 @@ header nav a{
 
  }
 
+
+ /* animations */
+ .main-heading {
+     opacity: 0;
+     animation: slideUp .8s forwards .3s;
+ }
+
+ .para, #view-plans-btn {
+     opacity: 0;
+     animation: fade.5s forwards 1s;
+ }
+
+ .people-img, .people-img-mob {
+     opacity: 0;
+     animation: scale 1s forwards .5s;
+ }
+
+
+ @keyframes slideUp {
+     0% {
+         transform: translateY(100px);
+     }
+     100% {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+  @keyframes fade {
+     0% {
+     }
+     100% {
+         opacity: 1;
+     }
+ }
+
+   @keyframes scale {
+     0% {
+         scale: 0;
+     }
+     100% {
+         opacity: 1;
+         scale: 1;
+     }
+ }
+
+ 
